@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "68d58384-b383-47d3-9ebe-15776e4fd449",
+		"name": "Moack API  1",
+		"description": "# About this collection\n\nThis collection contains a New Relic API that scans for vulnerabilities in specific security policies used in your service.\n\n## Using this collection\n\n**Step 1:** Update your application’s name in the request body.  \n\n``` json\n\"name\": \"Test Application\"\n\n```\n\n**Step 2:** Send the request to get a report of the security policies used in your service.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30343558"
+	},
+	"item": [
+		{
+			"name": "GET STUDENTS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response has a resaponl time \", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET STUDENT ID14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    });\r",
+							"pm.test(\"correct name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Firstname).to.eql(\"Mohamed\");\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Response time \", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students/14",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD STUDENTID15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"Firstname\": \"Ali\",\r\n    \"LastName\": \"Ibrahim\",\r\n    \"Titel\": \"Lead testing\",\r\n    \"country\": \"Qatar\"\r\n   \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET STUDENT ID15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students/15",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update countery of ID 14 FROM EGYPT TO SUDAN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \r\n    \"country\": \"Sudan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students/14",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get student 14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students/14",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update countery of ID 14 FROM EGYPT TO SUDAN Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Firstname\": \"Mohamed\",\r\n    \"LastName\": \"Abd elghany\",\r\n    \"Titel\": \"Testingengineer\",\r\n    \"country\": \"Sudan\",\r\n    \"id\": \"14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students/14",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all students",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete ID1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students/1",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetstudentAgain",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD STUDENTID16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"Firstname\": \"Tavares\",\r\n    \"LastName\": \"Ortiz\",\r\n    \"Titel\": \"Corporate Assurance Architect\",\r\n    \"country\": \"Uganda\"\r\n   \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetstudentAgain",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://65c5e474e5b94dfca2e07df0.mockapi.io/Students",
+					"protocol": "https",
+					"host": [
+						"65c5e474e5b94dfca2e07df0",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
